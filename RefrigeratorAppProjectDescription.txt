@@ -1,0 +1,29 @@
+﻿App Name: Fridge It (tentative)
+
+
+Description:
+The purpose of the app will be to keep a list of the current
+contents of a refrigerator.  The app will act like a repository 
+that can be accessed by multiple people (ideally those who are 
+using the actual refrigerator).  The repository will contain two 
+lists.  The first list keeps track of the current contents of a 
+refrigerator.  Each entry on this list will track the name, 
+expiration, and owner of the item the entry is for.  Other 
+information to be tracked may be added in the future.  There will 
+be an option to add and remove entries to the list that can be done 
+by all the users who have access to the list.  The second list will 
+be a “shopping list” to indicate items that the users wish to acquire, 
+though the item does not necessarily have to be for the refrigerator.  
+The shopping list will be similar to the refrigerator list in that each 
+entry will contain an information about an item’s name and possibly other 
+stuff.  The lists will be synced between users in real time assuming 
+that all users are online.  If a user is offline, they will have a copy 
+the most updated repository they were able to obtain but will not be 
+able to edit the repository.  There will be no notifications when the 
+repositories will be changed (possibly add an option to allow some 
+notifications in the future).  The interface should look nice 
+(i.e. picture of a fridge as the main background) and implement drag 
+and drop features. There will be a search function to search each 
+lists for specific items and a sort function to sort each list using 
+categories such as expiration date or owner.
+

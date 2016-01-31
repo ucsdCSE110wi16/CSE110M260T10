@@ -1,8 +1,16 @@
-A virtual fridge that keeps track of the food they have in their physical fridge by entering each entry. 
-Each entry includes an expiration date if available
-Each entry keeps track of who owns the food. 
-A shopping list with items that move to the fridge when crossed off. 
-Option to color code either based on type of items or owner of items. 
-The fridge is synced between every user in the household
-The app cannot be updated when offline. 
-The app can be viewed offline
+As a user, I want a virtual fridge that keeps track of the food I have in my physical fridge so that it is easier to share a fridge with others. 
+
+As a user, I want to be able to enter each entry into the virtual fridge so that the virtual fridge can be updated.
+ 
+As a user, I want each entry to include an expiration date if it¿s available so that I can tell when foods in my virtual fridge are expired.
+
+As a user, I want each entry to keep track of who owns the food so that I can easily tell who the owner of each food is. 
+
+As a user, I want the app to have a shopping list with items that move to the fridge (optionally)  when crossed off so that it is easier for me to add food to my fridge after I buy my wanted items. 
+
+As a user, I want the option to color code based on owner of items so that I can determine which foods belong to me and others. 
+As a user, I want the option to sync the fridge between every user in the household so that the fridge will be automatically updated.
+
+As a user, I want the app to not be updated when offline so that there are no conflicting changes to the fridge.
+ 
+As a user, I want to be able to view the app offline so that I do not always need internet connection to see what is in the fridge.

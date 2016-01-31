@@ -1,0 +1,8 @@
+A virtual fridge that keeps track of the food they have in their physical fridge by entering each entry. 
+Each entry includes an expiration date if available
+Each entry keeps track of who owns the food. 
+A shopping list with items that move to the fridge when crossed off. 
+Option to color code either based on type of items or owner of items. 
+The fridge is synced between every user in the household
+The app cannot be updated when offline. 
+The app can be viewed offline

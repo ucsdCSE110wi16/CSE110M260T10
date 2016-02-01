@@ -1,0 +1,26 @@
+					Fridge-it Timeline
+
+Week 5:
+User Stories by 1/30/16
+Sketch of app design finalized by 2/6/16
+Familiarize ourselves with Android Studio
+Set up Parse and Espresso
+
+Week 6:
+Create a database that represent the virtual fridge
+
+Week 7:
+Be able to insert, search, and delete foods into the database.
+Be able to sort foods inside the virtual fridge dependent in the owner of each food using different colors.
+
+Week 8:
+Have a shopping list with items that move to the fridge (optionally) when crossed off
+Be able to sync the fridge between every user in the household
+The fridge will not be updated when offline
+Can view the fridge offline
+
+Week 9:
+Implement expiration date
+
+Week 10:
+

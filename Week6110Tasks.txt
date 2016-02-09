@@ -1,0 +1,15 @@
+PURPOSE: Keeps track of food I have in my physical fridge that will make it easier to share fridge with others
+	User Stories: 
+	1.	Create a database for the food in fridge (SV, RR)
+	⁃	Creates List Class
+	⁃	Initialize with food to test
+	2.	Be able to search, insert (alphabetically), delete food from fridge (JM)
+	⁃	Implement search() in List Class
+	⁃	insert()
+	⁃	delete()s
+	3.	Each entry keeps track of who owns the food (KT, SY)
+	⁃	Create a skeleton for user story 1
+	⁃	Create a Food Class
+	⁃	Add an owner attribute
+	4.	Enter each entry into the virtual fridge so that it can be updated on other phones (Future)
+

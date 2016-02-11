@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +49,24 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void onLoginButtonClick (View v) {
+        Button button = (Button) v;
+        if(((Button) v).getText()=="Clicked!!") {
+            ((Button) v).setText("LOGIN");
+        }
+        else {
+            ((Button) v).setText("Clicked!!");
+        }
+    }
+    public void onSigninButtonClick (View v) {
+        Button button = (Button) v;
+        if(((Button) v).getText()=="Clicked!!") {
+            ((Button) v).setText("SIGN IN");
+        }
+        else {
+            ((Button) v).setText("Clicked!!");
+        }
     }
 }

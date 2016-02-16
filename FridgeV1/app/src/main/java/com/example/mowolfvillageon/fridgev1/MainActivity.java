@@ -1,5 +1,6 @@
 package com.example.mowolfvillageon.fridgev1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,12 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onLoginButtonClick (View v) {
         Button button = (Button) v;
-        if(((Button) v).getText()=="Clicked!!") {
-            ((Button) v).setText("LOGIN");
-        }
-        else {
-            ((Button) v).setText("Clicked!!");
-        }
+        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
     }
     public void onSigninButtonClick (View v) {
         Button button = (Button) v;

@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -24,9 +26,22 @@ public class Main2Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-        
+        populateListView();
     }
 
+    private void populateListView() {
+        // Create Fridge List of items
+        String[] starterFoods = {"Apple", "Chicken", "Water"};
 
+        // Set up adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this,
+                R.layout.textlistview, // layout being created
+                starterFoods); // items to add to list
+
+        // Configure List View
+        ListView list = (ListView) findViewById(R.id.listViewFridge);
+        list.setAdapter(adapter);
+    }
 
 }

@@ -60,8 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
     //When button is clicked, screen switched to second activity screen
     public void onLoginButtonClick (View v) {
+        /*Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(), Main2Activity.class));*/
+
         Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
+        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
     }
 
     //When button is clicked, screen switched to NewUserActivity screen

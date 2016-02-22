@@ -11,4 +11,13 @@
     <string name="foodOwner">Your Name</string>
     <string name="addNew">Add Item</string>
     <string name="formTitle">Food Entry Form</string>
+    <string name="title_activity_new_user">NewUserActivity</string>
+
+    <!-- Resources for NewUserActivity -->
+    <string name="newUserTitle">New User Form</string>
+    <string name="newUserName">Name</string>
+    <string name="newUserEmail">Email</string>
+    <string name="newUserPassword">Password</string>
+    <string name="newUserCreate">Create</string>
+
 </resources>

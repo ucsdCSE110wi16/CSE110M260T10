@@ -12,6 +12,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import com.firebase.client.Firebase;
+import com.firebase.client.FirebaseError;
+
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,29 +58,15 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    //When button is clicked, screen switched to second activity screen
     public void onLoginButtonClick (View v) {
         Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Main2Activity.class));
     }
 
+    //When button is clicked, screen switched to NewUserActivity screen
     public void onNewUserButtonClick (View v) {
-        /*Button button = (Button) v;
-        if(((Button) v).getText()=="Clicked!!") {
-            ((Button) v).setText("NEW USER");
-        }
-        else {
-            ((Button) v).setText("Clicked!!");
-        }*/
-        var ref = new Firebase("https://fridge-it.firebaseio.com");
-        ref.createUser({
-                email    : "bobtony@firebase.com",
-                password : "correcthorsebatterystaple"
-        }, function(error, userData) {
-            if (error) {
-                console.log("Error creating user:", error);
-            } else {
-                console.log("Successfully created user account with uid:", userData.uid);
-            }
-        });
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
     }
 }

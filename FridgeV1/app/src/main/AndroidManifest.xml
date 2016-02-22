@@ -33,6 +33,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mowolfvillageon.fridgev1.Main2Activity" />
         </activity>
+        <activity
+            android:name=".NewUserActivity"
+            android:label="@string/title_activity_new_user"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mowolfvillageon.fridgev1.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

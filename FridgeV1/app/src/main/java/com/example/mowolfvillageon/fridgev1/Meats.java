@@ -6,8 +6,8 @@ package com.example.mowolfvillageon.fridgev1;
 public class Meats extends Food {
     private String name;
 
-    public Meats(String owner, int expiration_month, int expiration_day, int expiration_year, String name) {
-        super(owner, expiration_month, expiration_day, expiration_year);
+    public Meats(String owner, String name) {
+        super(owner);
         this.name = name;
     }
 

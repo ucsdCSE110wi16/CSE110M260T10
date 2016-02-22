@@ -6,17 +6,16 @@ package com.example.mowolfvillageon.fridgev1;
 public class Dairy extends Food {
     private String name;
 
-    public Dairy(String owner, int expiration_month, int expiration_day, int expiration_year, String name) {
-        super(owner, expiration_month, expiration_day, expiration_year);
-        this.name = name;
-    }
-
-    public void setName(String name) {
+    public Dairy(String owner, String name) {
+        super(owner);
         this.name = name;
     }
 
     public String getName() {
-
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

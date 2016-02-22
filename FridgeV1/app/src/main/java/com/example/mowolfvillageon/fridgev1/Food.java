@@ -1,8 +1,6 @@
 package com.example.mowolfvillageon.fridgev1;
 
-/**
- * Created by Kevin on 2/21/2016.
- */
+
 public abstract class Food {
     private String owner;
     private int expiration_month;

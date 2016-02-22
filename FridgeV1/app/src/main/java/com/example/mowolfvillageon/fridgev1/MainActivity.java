@@ -11,11 +11,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.firebase.client.Firebase;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), Main2Activity.class));
     }
+
     public void onSigninButtonClick (View v) {
         Button button = (Button) v;
         if(((Button) v).getText()=="Clicked!!") {

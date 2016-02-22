@@ -9,11 +9,14 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.firebase.client.Firebase;
+
 public class Main2Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,5 +46,7 @@ public class Main2Activity extends AppCompatActivity {
         ListView list = (ListView) findViewById(R.id.listViewFridge);
         list.setAdapter(adapter);
     }
+    public void onAddItemButtonClick(View v){
 
+    }
 }

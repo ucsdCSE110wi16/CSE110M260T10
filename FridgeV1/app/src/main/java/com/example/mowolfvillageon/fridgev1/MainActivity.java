@@ -60,13 +60,24 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), Main2Activity.class));
     }
 
-    public void onSigninButtonClick (View v) {
-        Button button = (Button) v;
+    public void onNewUserButtonClick (View v) {
+        /*Button button = (Button) v;
         if(((Button) v).getText()=="Clicked!!") {
-            ((Button) v).setText("SIGN IN");
+            ((Button) v).setText("NEW USER");
         }
         else {
             ((Button) v).setText("Clicked!!");
-        }
+        }*/
+        var ref = new Firebase("https://fridge-it.firebaseio.com");
+        ref.createUser({
+                email    : "bobtony@firebase.com",
+                password : "correcthorsebatterystaple"
+        }, function(error, userData) {
+            if (error) {
+                console.log("Error creating user:", error);
+            } else {
+                console.log("Successfully created user account with uid:", userData.uid);
+            }
+        });
     }
 }

@@ -38,7 +38,7 @@
     <Button
         android:id="@+id/angry_btn2"
 
-        android:text="SIGN UP"
+        android:text="NEW USER"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
 
@@ -51,5 +51,5 @@
         android:fontFamily="sans-serif-thin"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="onSigninButtonClick" />
+        android:onClick="onNewUserButtonClick" />
 </RelativeLayout>

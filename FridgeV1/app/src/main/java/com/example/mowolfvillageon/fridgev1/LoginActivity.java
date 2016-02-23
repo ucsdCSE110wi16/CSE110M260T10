@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         String loginEmail = etLoginEmail.getText().toString();
         String loginPassword = etLoginPassword.getText().toString();
 
-        Firebase ref = new Firebase("https://fridge-it.firebaseio.com");
+        Firebase ref = new Firebase("https://fridge-it2.firebaseio.com");
         ref.authWithPassword(loginEmail, loginPassword, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {

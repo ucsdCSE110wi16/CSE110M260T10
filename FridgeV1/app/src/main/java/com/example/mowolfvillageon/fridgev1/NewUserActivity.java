@@ -43,7 +43,7 @@ public class NewUserActivity extends AppCompatActivity {
         String userEmail = etNewUserEmail.getText().toString();
         String userPassword = etNewUserPassword.getText().toString();
 
-        Firebase myFirebaseRef = new Firebase("https://fridge-it.firebaseio.com");
+        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com");
 
         myFirebaseRef.createUser(userEmail, userPassword, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override

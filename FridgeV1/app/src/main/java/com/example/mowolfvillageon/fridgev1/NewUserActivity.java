@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.firebase.client.Firebase;
@@ -43,12 +44,13 @@ public class NewUserActivity extends AppCompatActivity {
         String userEmail = etNewUserEmail.getText().toString();
         String userPassword = etNewUserPassword.getText().toString();
 
-        Firebase myFirebaseRef = new Firebase("https://fridge-it.firebaseio.com");
+        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com");
 
         myFirebaseRef.createUser(userEmail, userPassword, new Firebase.ValueResultHandler<Map<String, Object>>() {
             @Override
             public void onSuccess(Map<String, Object> result) {
                 System.out.println("Successfully created user account with uid: " + result.get("uid"));
+                startActivity(new Intent(getApplicationContext(), Main2Activity.class));
             }
             @Override
             public void onError(FirebaseError firebaseError) {

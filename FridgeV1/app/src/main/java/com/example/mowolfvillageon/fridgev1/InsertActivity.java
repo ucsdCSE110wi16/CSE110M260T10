@@ -39,7 +39,7 @@ public class InsertActivity extends AppCompatActivity {
         String FoodCategory = etFoodCategory.getText().toString();
         String FoodOwner = etFoodOwner.getText().toString();
 
-        Firebase myFirebaseRef = new Firebase("https://fridge-it.firebaseio.com/");
+        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
         Fruits fruit = new Fruits(FoodOwner, FoodName);
         myFirebaseRef.child(fruit.getName()).setValue(fruit);
 

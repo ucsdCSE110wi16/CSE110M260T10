@@ -12,6 +12,20 @@
     <string name="formTitle">Food Entry Form</string>
     <string name="title_activity_insert">InsertActivity</string>
 
+    <string-array name="food_categories">
+        <item>Condaments</item>
+        <item>Dairy</item>
+        <item>Drinks</item>
+        <item>Fruit</item>
+        <item>Frozen Meals</item>
+        <item>Grains</item>
+        <item>Other</item>
+        <item>Meals</item>
+        <item>Meats</item>
+        <item>Vegetables</item>
+
+    </string-array>
+
     <!-- Resources for NewUserActivity -->
     <string name="newUserTitle">New User Form</string>
     <string name="newUserName">Name</string>

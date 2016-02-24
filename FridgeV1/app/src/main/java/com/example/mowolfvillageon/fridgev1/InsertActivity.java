@@ -33,7 +33,7 @@ public class InsertActivity extends AppCompatActivity {
 
     public void insert(View button){
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
-        EditText etFoodCategory = (EditText) findViewById(R.id.EditTextFoodCategory);
+        Spinner etFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
         EditText etFoodOwner = (EditText) findViewById(R.id.EditTextFoodOwner);
         String FoodName = etFoodName.getText().toString();
         String FoodCategory = etFoodCategory.getText().toString();

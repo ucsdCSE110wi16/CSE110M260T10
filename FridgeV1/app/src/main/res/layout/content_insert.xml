@@ -33,13 +33,14 @@
             android:hint="@string/foodName"
             android:ems="10"
             android:id="@+id/EditTextFoodName" />
-        <EditText
+
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="@string/foodCategory"
-            android:ems="10"
-            android:id="@+id/EditTextFoodCategory" />
+            android:id="@+id/spinner"
+            android:spinnerMode="dropdown"
+            android:id="@+id/SpinnerFoodCatagory"/>
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

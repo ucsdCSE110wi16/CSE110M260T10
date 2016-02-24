@@ -57,7 +57,8 @@ public class NewUserActivity extends AppCompatActivity {
             @Override
             public void onError(FirebaseError firebaseError) {
                 // there was an error
-                Toast.makeText(NewUserActivity.this, "Unsuccessful in creating a new user account", Toast.LENGTH_SHORT).show();
+                Toast.makeText(NewUserActivity.this, "Unsuccessful in creating a new user account.\n" +
+                        "Make sure the email entered is valid and has an @ sign", Toast.LENGTH_LONG).show();
                 System.out.println("Unsuccessful in creating a new user account");
                // startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
             }

@@ -15,7 +15,8 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:weightSum="1">
         android:weightSum="1">
 
         <TextView
@@ -34,11 +35,21 @@
             android:ems="10"
             android:id="@+id/EditTextFoodName" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Food Category"
+            android:id="@+id/CatagoryLabel" />
+
         <Spinner
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:id="@+id/SpinnerFoodCatagory"/>
+            android:id="@+id/SpinnerFoodCatagory"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/CatagoryLabel" />
+            //android:layout_gravity="center_horizontal" />
 
         <EditText
             android:layout_width="match_parent"

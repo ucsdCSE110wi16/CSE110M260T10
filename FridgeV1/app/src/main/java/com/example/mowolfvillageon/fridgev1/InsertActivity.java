@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 
@@ -32,29 +33,26 @@ public class InsertActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
 
-    public void insert(View button){
+
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
-        Spinner etFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
+        Spinner spinFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
         EditText etFoodOwner = (EditText) findViewById(R.id.EditTextFoodOwner);
 
-        // Food Name
-        String FoodName = etFoodName.getText().toString();
+        // Catagory Spinner - Set up
+        ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
+                R.array.food_categories,
+                android.R.layout.simple_spinner_item);
+        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinFoodCategory.setAdapter(categoryAdapter);
 
-        // Food Category
-             // Set up
-        ArrayAdapter<CharSequence> categoryadapter = ArrayAdapter.createFromResource(this,
-                        R.array.food_categories,
-                        R.layout.support_simple_spinner_dropdown_item);
-        categoryadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        etFoodCategory.setAdapter(categoryadapter);
-            // Get Spinner info
-        etFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
-        etFoodCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        // Get Spinner info
+        // spinFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
+        spinFoodCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String FoodCategory =parent.getItemAtPosition(position).toString();
+                String FoodCategory = parent.getItemAtPosition(position).toString();
+                Toast.makeText(InsertActivity.this, FoodCategory, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -62,6 +60,18 @@ public class InsertActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void insert(View button){
+        EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
+        Spinner spinFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
+        EditText etFoodOwner = (EditText) findViewById(R.id.EditTextFoodOwner);
+
+        // Food Name
+        String FoodName = etFoodName.getText().toString();
+
+        // Food Category
+        // Done above
 
 
         // Food Owner

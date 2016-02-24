@@ -33,5 +33,22 @@
         android:textAlignment="center"
         android:layout_marginBottom="50dp"
         android:layout_alignParentBottom="true"
-        android:onClick="onAddItemButtonClick" />
+        android:onClick="onAddItemButtonClick"
+        android:id="@+id/button" />
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="@string/logout_button"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:background="#fffff0"
+        android:contextClickable="true"
+        android:fontFamily="sans-serif-thin"
+        android:focusable="false"
+        android:textAlignment="center"
+        android:onClick="onLogOutButtonClick"
+        android:layout_alignTop="@+id/listViewFridge"
+        android:layout_alignRight="@+id/listViewFridge"
+        android:layout_alignEnd="@+id/listViewFridge" />
 </RelativeLayout>

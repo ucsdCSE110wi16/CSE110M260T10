@@ -23,15 +23,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
@@ -45,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         ref.authWithPassword(loginEmail, loginPassword, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
-                Toast.makeText(LoginActivity.this, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Login Successful!" , Toast.LENGTH_SHORT).show();
                 System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Button button = (Button) v;
                 startActivity(new Intent(getApplicationContext(), Main2Activity.class));

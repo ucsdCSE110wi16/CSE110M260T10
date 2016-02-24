@@ -59,13 +59,13 @@ public class NewUserActivity extends AppCompatActivity {
                 // there was an error
                 Toast.makeText(NewUserActivity.this, "Unsuccessful in creating a new user account", Toast.LENGTH_SHORT).show();
                 System.out.println("Unsuccessful in creating a new user account");
-                startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
+               // startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
             }
         });
 
-        Intent output = new Intent();
-        setResult(RESULT_OK, output);
-        finish();
+       // Intent output = new Intent();
+       // setResult(RESULT_OK, output);
+       // finish();
     }
 
 }

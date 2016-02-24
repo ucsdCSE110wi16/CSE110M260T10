@@ -36,15 +36,16 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(final View v) {
-        EditText etLoginEmail = (EditText) findViewById(R.id.EditTextLoginEmail);
+        final EditText etLoginEmail = (EditText) findViewById(R.id.EditTextLoginEmail);
         EditText etLoginPassword = (EditText) findViewById(R.id.EditTextLoginPassword);
-        String loginEmail = etLoginEmail.getText().toString();
+        final String loginEmail = etLoginEmail.getText().toString();
         String loginPassword = etLoginPassword.getText().toString();
 
         Firebase ref = new Firebase("https://fridge-it2.firebaseio.com");
         ref.authWithPassword(loginEmail, loginPassword, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
+                Toast.makeText(LoginActivity.this, "User ID: " + authData.getUid() + ", Provider: " + authData.getProvider(), Toast.LENGTH_SHORT).show();
                 System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Button button = (Button) v;
                 startActivity(new Intent(getApplicationContext(), Main2Activity.class));
@@ -56,7 +57,8 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Login Error", Toast.LENGTH_SHORT).show();
                 System.out.println("Login Error");
                 Button button = (Button) v;
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                // startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                etLoginEmail.setText(loginEmail);
             }
         });
 

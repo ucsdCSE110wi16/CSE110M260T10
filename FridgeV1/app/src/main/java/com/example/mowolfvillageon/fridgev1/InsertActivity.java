@@ -7,7 +7,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.firebase.client.Firebase;
 
@@ -35,8 +38,33 @@ public class InsertActivity extends AppCompatActivity {
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
         Spinner etFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
         EditText etFoodOwner = (EditText) findViewById(R.id.EditTextFoodOwner);
+
+        // Food Name
         String FoodName = etFoodName.getText().toString();
-        String FoodCategory = etFoodCategory.getText().toString();
+
+        // Food Category
+             // Set up
+        ArrayAdapter<CharSequence> categoryadapter = ArrayAdapter.createFromResource(this,
+                        R.array.food_categories,
+                        R.layout.support_simple_spinner_dropdown_item);
+        categoryadapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        etFoodCategory.setAdapter(categoryadapter);
+            // Get Spinner info
+        etFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
+        etFoodCategory.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String FoodCategory =parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        // Food Owner
         String FoodOwner = etFoodOwner.getText().toString();
 
         Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");

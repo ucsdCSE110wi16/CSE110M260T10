@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -62,5 +64,12 @@ public class MainActivity extends AppCompatActivity {
     public void onNewUserButtonClick (View v) {
         Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
+    }
+
+    //When image is clicked, screen switched to Post Login Screen screen
+    public void onDevHackClick (View v) {
+        Toast.makeText(MainActivity.this, "Hack Found", Toast.LENGTH_SHORT).show();
+        ImageView dev = (ImageView) v;
+        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
     }
 }

@@ -1,5 +1,6 @@
 package com.example.mowolfvillageon.fridgev1;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
@@ -20,20 +23,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //ActionBar actionBar = getActionBar();
+        //actionBar.hide();
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -71,5 +67,12 @@ public class MainActivity extends AppCompatActivity {
     public void onNewUserButtonClick (View v) {
         Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), NewUserActivity.class));
+    }
+
+    //When image is clicked, screen switched to Post Login Screen screen
+    public void onDevHackClick (View v) {
+        Toast.makeText(MainActivity.this, "Hack Found", Toast.LENGTH_SHORT).show();
+        ImageView dev = (ImageView) v;
+        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
     }
 }

@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="button_insert">ADD AN ITEM TO YOUR FRIDGE</string>
+    <string name="logout_button">LOG OUT</string>
 
     <!-- Resources for InsertActivity -->
     <string name="foodName">Your Item</string>
@@ -11,6 +12,20 @@
     <string name="addNew">Add Item</string>
     <string name="formTitle">Food Entry Form</string>
     <string name="title_activity_insert">InsertActivity</string>
+
+    <string-array name="food_categories">
+        <item>Condiments</item>
+        <item>Dairy</item>
+        <item>Drinks</item>
+        <item>Fruit</item>
+        <item>Frozen Meals</item>
+        <item>Grains</item>
+        <item>Other</item>
+        <item>Meals</item>
+        <item>Meats</item>
+        <item>Vegetables</item>
+
+    </string-array>
 
     <!-- Resources for NewUserActivity -->
     <string name="newUserTitle">New User Form</string>

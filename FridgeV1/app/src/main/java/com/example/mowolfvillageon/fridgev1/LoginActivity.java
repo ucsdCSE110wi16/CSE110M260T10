@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.firebase.client.AuthData;
 import com.firebase.client.Firebase;
@@ -22,28 +23,20 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void login(final View v) {
-        EditText etLoginEmail = (EditText) findViewById(R.id.EditTextLoginEmail);
+        final EditText etLoginEmail = (EditText) findViewById(R.id.EditTextLoginEmail);
         EditText etLoginPassword = (EditText) findViewById(R.id.EditTextLoginPassword);
-        String loginEmail = etLoginEmail.getText().toString();
+        final String loginEmail = etLoginEmail.getText().toString();
         String loginPassword = etLoginPassword.getText().toString();
 
         Firebase ref = new Firebase("https://fridge-it2.firebaseio.com");
         ref.authWithPassword(loginEmail, loginPassword, new Firebase.AuthResultHandler() {
             @Override
             public void onAuthenticated(AuthData authData) {
+                Toast.makeText(LoginActivity.this, "Login Successful!" , Toast.LENGTH_SHORT).show();
                 System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Button button = (Button) v;
                 startActivity(new Intent(getApplicationContext(), Main2Activity.class));
@@ -52,9 +45,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onAuthenticationError(FirebaseError firebaseError) {
                 // there was an error
+                Toast.makeText(LoginActivity.this, "Login Error", Toast.LENGTH_SHORT).show();
                 System.out.println("Login Error");
                 Button button = (Button) v;
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                // startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                etLoginEmail.setText(loginEmail);
             }
         });
 

@@ -26,9 +26,8 @@
             android:layout_height="wrap_content"
             android:text="@string/newUserTitle"
             android:textSize="12pt"
-            android:fontFamily="sans-serif"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF">
+            android:textColor="#FFFFFF"
+            android:textAlignment="center">
 
         </TextView>
 
@@ -62,10 +61,11 @@
             android:text="@string/newUserCreate"
             android:onClick="createNewUser"
             android:background="#14a38d"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif"
-            android:layout_width="fill_parent">
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="200dp">
         </Button>
     </LinearLayout>
 </RelativeLayout>

@@ -53,7 +53,7 @@
             android:textColor="#14a38d"/>
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="258dp"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
             android:id="@+id/SpinnerFoodCatagory"
@@ -62,7 +62,7 @@
             android:fontFamily="sans-serif"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="right" />
 
         <EditText
             android:layout_width="match_parent"
@@ -81,9 +81,10 @@
             android:onClick="insert"
             android:layout_width="fill_parent"
             android:background="#14a38d"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif">
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_marginTop="175dp">
         </Button>
     </LinearLayout>
 </RelativeLayout>

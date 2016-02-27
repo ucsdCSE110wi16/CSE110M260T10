@@ -54,7 +54,7 @@ public class Main2Activity extends AppCompatActivity {
                 }
                 adapter = new ArrayAdapter<>(
                         Main2Activity.this,
-                        R.layout.textlistview, // layout being created
+                        R.layout.custom_textview, // layout being created
                         foodNames); //items to add to list
 
                 ListView list = (ListView) findViewById(R.id.listViewFridge);

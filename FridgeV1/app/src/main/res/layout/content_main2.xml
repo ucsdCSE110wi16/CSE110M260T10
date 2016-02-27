@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,9 +11,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#242b3e"
     android:textColor="#FFFFFF"
+
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.mowolfvillageon.fridgev1.Main2Activity"
     tools:showIn="@layout/activity_main2">
+
+
 
     <Button
         android:layout_width="70dp"
@@ -40,7 +44,9 @@
         android:id="@+id/listViewFridge"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/searchView" />
+        android:layout_below="@+id/searchView"
+
+        />
 
     <Button
         android:layout_width="300dp"
@@ -67,6 +73,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/button2"
-        android:layout_toStartOf="@+id/button2" />
+        android:layout_toStartOf="@+id/button2"/>
+
+
 
 </RelativeLayout>
+

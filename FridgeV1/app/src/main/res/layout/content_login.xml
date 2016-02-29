@@ -8,6 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#242b3e"
+    android:textColor="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.mowolfvillageon.fridgev1.LoginActivity"
     tools:showIn="@layout/activity_login">
@@ -20,10 +22,13 @@
 
         <TextView
             android:id="@+id/TextViewLoginTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/loginTitle"
-            android:textSize="10pt">
+            android:textSize="12pt"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF">
         </TextView>
 
         <EditText
@@ -32,20 +37,27 @@
             android:inputType="text"
             android:hint="@string/loginEmail"
             android:ems="10"
-            android:id="@+id/EditTextLoginEmail" />
+            android:id="@+id/EditTextLoginEmail"
+            android:textColor="#FFFFFF"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
             android:hint="@string/loginPassword"
             android:ems="10"
-            android:id="@+id/EditTextLoginPassword" />
+            android:id="@+id/EditTextLoginPassword"
+            android:textColor="#FFFFFF"/>
         <Button
             android:id="@+id/Login"
             android:layout_height="wrap_content"
             android:text="@string/loginLogin"
             android:onClick="login"
-            android:layout_width="fill_parent">
+            android:background="#14a38d"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="250dp">
         </Button>
     </LinearLayout>
 </RelativeLayout>

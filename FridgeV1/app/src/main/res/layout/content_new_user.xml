@@ -8,6 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#242b3e"
+    android:textColor="#FFFFFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.mowolfvillageon.fridgev1.NewUserActivity"
     tools:showIn="@layout/activity_new_user">
@@ -15,15 +17,18 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
         android:weightSum="1">
 
         <TextView
             android:id="@+id/TextViewTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/newUserTitle"
-            android:textSize="10pt">
+            android:textSize="12pt"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center">
+
         </TextView>
 
         <EditText
@@ -32,6 +37,7 @@
             android:inputType="text"
             android:hint="@string/newUserName"
             android:ems="10"
+            android:textColor="#FFFFFF"
             android:id="@+id/EditTextNewUserName" />
         <EditText
             android:layout_width="match_parent"
@@ -39,6 +45,7 @@
             android:inputType="text"
             android:hint="@string/newUserEmail"
             android:ems="10"
+            android:textColor="#FFFFFF"
             android:id="@+id/EditTextNewUserEmail" />
         <EditText
             android:layout_width="match_parent"
@@ -46,13 +53,19 @@
             android:inputType="text"
             android:hint="@string/newUserPassword"
             android:ems="10"
+            android:textColor="#FFFFFF"
             android:id="@+id/EditTextNewUserPassword" />
         <Button
             android:id="@+id/AddUser"
             android:layout_height="wrap_content"
             android:text="@string/newUserCreate"
             android:onClick="createNewUser"
-            android:layout_width="fill_parent">
+            android:background="#14a38d"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="200dp">
         </Button>
     </LinearLayout>
 </RelativeLayout>

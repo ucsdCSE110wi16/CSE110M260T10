@@ -1,0 +1,12 @@
+Jimmy
+    Design: Wireframe (Tues 11:59am)
+    Logout button (Tues 11:59am)
+Kevin
+    Firebase: Show Data (Thurs 5pm)
+Roger
+    Search Function (Friday 6pm)
+Sandro
+    Firebase: Show Data (Thurs 5pm)
+Stephanie
+    Category drop down (Tues 11:59)
+    Design: XML background (Wed 11:59)

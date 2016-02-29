@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#242b3e"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.mowolfvillageon.fridgev1.InsertActivity"
     tools:showIn="@layout/activity_insert">
@@ -21,10 +22,13 @@
 
         <TextView
             android:id="@+id/TextViewTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/formTitle"
-            android:textSize="10pt">
+            android:textSize="12pt"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF">
         </TextView>
 
         <EditText
@@ -33,23 +37,32 @@
             android:inputType="text"
             android:hint="@string/foodName"
             android:ems="10"
-            android:id="@+id/EditTextFoodName" />
+            android:id="@+id/EditTextFoodName"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Food Category"
-            android:id="@+id/CatagoryLabel" />
+            android:id="@+id/CatagoryLabel"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#14a38d"/>
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="258dp"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
             android:id="@+id/SpinnerFoodCatagory"
             android:layout_alignParentRight="true"
-            android:layout_toRightOf="@+id/CatagoryLabel" />
-            //android:layout_gravity="center_horizontal" />
+            android:layout_toRightOf="@+id/CatagoryLabel"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="right" />
 
         <EditText
             android:layout_width="match_parent"
@@ -57,13 +70,21 @@
             android:inputType="text"
             android:hint="@string/foodOwner"
             android:ems="10"
-            android:id="@+id/EditTextFoodOwner" />
+            android:id="@+id/EditTextFoodOwner"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"/>
         <Button
             android:id="@+id/AddItem"
             android:layout_height="wrap_content"
             android:text="@string/addNew"
             android:onClick="insert"
-            android:layout_width="fill_parent">
+            android:layout_width="fill_parent"
+            android:background="#14a38d"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_marginTop="175dp">
         </Button>
     </LinearLayout>
 </RelativeLayout>

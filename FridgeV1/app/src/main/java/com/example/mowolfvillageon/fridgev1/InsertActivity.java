@@ -139,6 +139,11 @@ public class InsertActivity extends AppCompatActivity {
         } */
         Intent output = new Intent();
         setResult(RESULT_OK, output);
-        finish();
+        //finish();
+
+        //creates new main2 while deleting old main2
+        Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

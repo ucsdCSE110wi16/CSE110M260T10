@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">FridgeV1</string>
+    <string name="app_name">Fridge-it!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main2">My Fridge</string>
     <string name="button_insert">ADD AN ITEM TO YOUR FRIDGE</string>
     <string name="logout_button">LOG OUT</string>
 
@@ -11,7 +11,7 @@
     <string name="foodOwner">Your Name</string>
     <string name="addNew">Add Item</string>
     <string name="formTitle">Food Entry Form</string>
-    <string name="title_activity_insert">InsertActivity</string>
+    <string name="title_activity_insert">Food Entry Form</string>
 
     <string-array name="food_categories">
         <item>Condiments</item>
@@ -33,12 +33,12 @@
     <string name="newUserEmail">Email</string>
     <string name="newUserPassword">Password</string>
     <string name="newUserCreate">Create</string>
-    <string name="title_activity_new_user">NewUserActivity</string>
+    <string name="title_activity_new_user">New User Form</string>
 
     <!-- Resources for LoginActivity -->
     <string name="loginTitle">User Login</string>
     <string name="loginEmail">Email</string>
     <string name="loginPassword">Password</string>
     <string name="loginLogin">Login</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">User Login</string>
 </resources>

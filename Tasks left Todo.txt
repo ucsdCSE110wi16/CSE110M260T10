@@ -1,0 +1,22 @@
+Remaining items to do
+
+Remove (Kevin)
+Make buttons easier to click (Kevin)
+Bigger text for list of items (Kevin)
+Filter by categories (owner, expiration, food type) (Stephanie/Sandro)
+Click on item for its details 
+Backend (Sandro) 
+GUI (Stephanie) - just set text
+Fixing the ABC order (So capitalizing doesn’t have preference)  -Jimmy
+Search button more visible (Roger Ruan)
+Not middle aligned (Roger Ruan)
+Lower the buttons (making use of whitespace) (Roger Ruan) done i think??
+Drop down for list owners (Limited owners) (Kevin) (MAYBE)
+Change Titlebars to be better names - (Roger Ruan) done, removed bars
+Make drop down items = white text - Roger
+Make expiration  option in insert (Stephanie/Jimmy) (Sandro, backend)
+Limit database to specific user (Sandro?)
+Color food based on who owns (Stephanie)
+Design new icon (Stephanie, Jimmy)
+
+

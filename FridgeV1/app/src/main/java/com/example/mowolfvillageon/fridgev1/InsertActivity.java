@@ -34,9 +34,10 @@ public class InsertActivity extends AppCompatActivity {
         // Catagory Spinner - Set up
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.food_categories,
-                android.R.layout.simple_spinner_item);
+                R.layout.custom_textview);
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinFoodCategory.setAdapter(categoryAdapter);
+        //categoryAdapter.setDropDownViewResource(android.R.layout.custom_textview);
 
 
     }

@@ -2,7 +2,8 @@
     <string name="app_name">Fridge-it!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">My Fridge</string>
-    <string name="button_insert">ADD AN ITEM TO YOUR FRIDGE</string>
+    <string name="button_insert">ADD AN ITEM</string>
+    <string name="button_remove">REMOVE AN ITEM</string>
     <string name="logout_button">LOG OUT</string>
 
     <!-- Resources for InsertActivity -->

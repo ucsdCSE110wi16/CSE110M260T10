@@ -54,8 +54,8 @@
         android:onClick="onNewUserButtonClick" />
 
     <ImageView
-        android:layout_width="10dp"
-        android:layout_height="10dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:id="@+id/DevHack"
         android:onClick="onDevHackClick"
         android:background="#131313"

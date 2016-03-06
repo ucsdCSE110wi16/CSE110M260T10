@@ -1,8 +1,8 @@
 Remaining items to do
 
-Remove (Kevin)
-Make buttons easier to click (Kevin)
-Bigger text for list of items (Kevin)
+Remove (Kevin) done
+Make buttons easier to click (Kevin) done
+Bigger text for list of items (Kevin) done
 Filter by categories (owner, expiration, food type) (Stephanie/Sandro)
 Click on item for its details 
 Backend (Sandro) 

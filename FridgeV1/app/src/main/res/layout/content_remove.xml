@@ -19,5 +19,25 @@
         android:layout_height="fill_parent"
         android:id="@+id/listViewFridgeRemove"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/cancelButton" />
+
+    <Button
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:text="@string/button_remove_cancel"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@drawable/buttonshape"
+        android:contextClickable="true"
+        android:fontFamily="sans-serif-thin"
+        android:focusable="false"
+        android:textAlignment="center"
+        android:onClick="onCancelRemoveItemButtonClick"
+        android:id="@+id/cancelButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/listViewFridgeRemove"
+        android:layout_alignEnd="@+id/listViewFridgeRemove"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>

@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -88,6 +89,10 @@ public class RemoveActivity extends AppCompatActivity {
 
     }
 
-
+    // Button for canceling the removal of an Item
+    public void onCancelRemoveItemButtonClick(View v){
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
+    }
 
 }

@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -66,6 +67,18 @@ public class Main2Activity extends AppCompatActivity {
                 list.setAdapter(adapter);
                 Collections.sort(foodNames);
 
+                //Click on items for its details
+                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapter, View v, int position,
+                                            long arg3) {
+                        //Obtain string representation of food item to remove
+                        String value = (String) adapter.getItemAtPosition(position);
+
+                        Toast.makeText(Main2Activity.this, value, Toast.LENGTH_SHORT).show();
+
+                    }
+                });
 
                 //Filtering-styled search function
                 sv = (SearchView) findViewById(R.id.searchView);

@@ -16,6 +16,8 @@
 
     <!-- Resources for RemoveActivity -->
     <string name="title_activity_remove">Food Removal</string>
+    <string name="button_remove_cancel">CANCEL</string>
+
 
     <string-array name="food_categories">
         <item>Condiments</item>

@@ -16,11 +16,10 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-           // android:theme="@style/Theme.myTheme.TitleBar" >
+            // android:theme="@style/Theme.myTheme.TitleBar" >
             //android:theme="@style/AppTheme.NoActionBar">
             //android:theme="@android:style/Theme.NoTitleBar">
             //android:theme="@style/Theme.AppCompat.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,6 +56,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mowolfvillageon.fridgev1.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RemoveActivity"
+            android:label="@string/title_activity_remove"
+            android:parentActivityName=".Main2Activity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mowolfvillageon.fridgev1.Main2Activity" />
         </activity>
     </application>
 

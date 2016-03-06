@@ -16,7 +16,7 @@
     tools:context="com.example.mowolfvillageon.fridgev1.Main2Activity"
     tools:showIn="@layout/activity_main2">
 
-//android:background="#242b3e"
+<!--android:background="#242b3e"-->
 
     <Button
         android:layout_width="70dp"
@@ -76,7 +76,7 @@
         android:fontFamily="sans-serif-thin"
         android:focusable="false"
         android:textAlignment="center"
-        android:onClick="onAddItemButtonClick"
+        android:onClick="onRemoveItemButtonClick"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/button2"

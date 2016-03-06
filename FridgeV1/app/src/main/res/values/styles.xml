@@ -18,10 +18,10 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
-
     <style name="windowTitleBackgroundStyle">
         <item name="android:background">#FFFFFF</item>
     </style>
+
     <style name="windowTitleStyle">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:padding">12dip</item>

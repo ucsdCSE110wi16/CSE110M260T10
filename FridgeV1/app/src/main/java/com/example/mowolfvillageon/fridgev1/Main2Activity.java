@@ -65,7 +65,7 @@ public class Main2Activity extends AppCompatActivity {
                 ListView list = (ListView) findViewById(R.id.listViewFridge);
                 list.setAdapter(adapter);
                 Collections.sort(foodNames);
-                
+
 
                 //Filtering-styled search function
                 sv = (SearchView) findViewById(R.id.searchView);
@@ -104,6 +104,12 @@ public class Main2Activity extends AppCompatActivity {
     public void onAddItemButtonClick(View v){
         Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), InsertActivity.class));
+    }
+
+    // Button for removing an Item
+    public void onRemoveItemButtonClick(View v){
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(), RemoveActivity.class));
     }
 
     // Logout Button

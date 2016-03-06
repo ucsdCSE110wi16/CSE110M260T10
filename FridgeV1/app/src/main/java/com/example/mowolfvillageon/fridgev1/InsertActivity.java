@@ -34,12 +34,14 @@ public class InsertActivity extends AppCompatActivity {
         // Catagory Spinner - Set up
         ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
                 R.array.food_categories,
-                android.R.layout.simple_spinner_item);
+                R.layout.custom_textview);
         categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinFoodCategory.setAdapter(categoryAdapter);
+        //categoryAdapter.setDropDownViewResource(android.R.layout.custom_textview);
 
 
     }
+
 
     public void insert(View button){
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
@@ -48,15 +50,7 @@ public class InsertActivity extends AppCompatActivity {
 
         // Food Name
         String FoodName = etFoodName.getText().toString();
-        // Capatalizes first letter of word, lowercase rest
-        String FoodNameLetter = "";
-        for(int i=0; i<FoodName.length(); i++) {
-            FoodNameLetter+=Character.toLowerCase(FoodName.charAt(i));
-            System.out.println(FoodNameLetter);
-        }
-        FoodName = FoodNameLetter;
-        System.out.println("FULL NAME IS: "+FoodName);
-        FoodName = Character.toUpperCase(FoodName.charAt(0)) + FoodName.substring(1);
+        FoodName = wordCaseStandardized(FoodName);
 
 
         // Food Category
@@ -79,7 +73,7 @@ public class InsertActivity extends AppCompatActivity {
 
         // Food Owner
         String FoodOwner = etFoodOwner.getText().toString();
-
+        FoodOwner = wordCaseStandardized(FoodOwner);
 
         Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
 
@@ -154,5 +148,19 @@ public class InsertActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+    }
+
+    public String wordCaseStandardized(String a) {
+        String b;
+
+        // Capatalizes first letter of word, lowercase rest
+        b = "";
+        for(int i=0; i<a.length(); i++) {
+            b+=Character.toLowerCase(a.charAt(i));
+        }
+        a = b;
+        a = Character.toUpperCase(a.charAt(0)) + a.substring(1);
+
+        return a;
     }
 }

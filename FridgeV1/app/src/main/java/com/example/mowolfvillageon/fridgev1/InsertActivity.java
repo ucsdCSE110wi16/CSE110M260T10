@@ -48,6 +48,15 @@ public class InsertActivity extends AppCompatActivity {
 
         // Food Name
         String FoodName = etFoodName.getText().toString();
+        // Capatalizes first letter of word, lowercase rest
+        String FoodNameLetter = "";
+        for(int i=0; i<FoodName.length(); i++) {
+            FoodNameLetter+=Character.toLowerCase(FoodName.charAt(i));
+            System.out.println(FoodNameLetter);
+        }
+        FoodName = FoodNameLetter;
+        System.out.println("FULL NAME IS: "+FoodName);
+        FoodName = Character.toUpperCase(FoodName.charAt(0)) + FoodName.substring(1);
 
 
         // Food Category

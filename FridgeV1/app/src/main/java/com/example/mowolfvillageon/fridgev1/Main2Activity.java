@@ -23,6 +23,8 @@ import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -62,6 +64,8 @@ public class Main2Activity extends AppCompatActivity {
 
                 ListView list = (ListView) findViewById(R.id.listViewFridge);
                 list.setAdapter(adapter);
+                Collections.sort(foodNames);
+                
 
                 //Filtering-styled search function
                 sv = (SearchView) findViewById(R.id.searchView);

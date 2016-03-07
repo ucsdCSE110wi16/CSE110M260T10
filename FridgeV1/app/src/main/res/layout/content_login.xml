@@ -31,6 +31,16 @@
             android:textColor="#FFFFFF">
         </TextView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Email"
+            android:id="@+id/textView"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#14a38d" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -39,6 +49,17 @@
             android:ems="10"
             android:id="@+id/EditTextLoginEmail"
             android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Password"
+            android:id="@+id/textView5"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#14a38d" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

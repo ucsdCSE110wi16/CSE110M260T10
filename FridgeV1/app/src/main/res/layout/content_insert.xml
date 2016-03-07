@@ -28,8 +28,19 @@
             android:textSize="12pt"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
-            android:textColor="#FFFFFF">
+            android:textColor="#FFFFFF"
+            android:paddingBottom="10dp">
         </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Food Name"
+            android:id="@+id/textView"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#14a38d" />
 
         <EditText
             android:layout_width="match_parent"
@@ -54,7 +65,7 @@
             android:textColor="#14a38d"/>
 
         <Spinner
-            android:layout_width="258dp"
+            android:layout_width="335dp"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
             android:id="@+id/SpinnerFoodCatagory"
@@ -64,6 +75,16 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:layout_gravity="right" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Expiration Date"
+            android:id="@+id/textView3"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#14a38d" />
 
         <EditText
             android:layout_width="match_parent"
@@ -76,6 +97,16 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textColorHint="#808080"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Your Name"
+            android:id="@+id/textView4"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#14a38d" />
 
         <EditText
             android:layout_width="match_parent"

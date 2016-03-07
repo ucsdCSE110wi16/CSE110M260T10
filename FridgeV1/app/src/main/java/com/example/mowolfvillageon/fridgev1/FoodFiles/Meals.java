@@ -10,7 +10,7 @@ public class Meals extends Food{
     public Meals(String owner, String name) {
         super(owner);
         this.name = name;
-        this.catagory = "Meals";
+        this.catagory = "Meal";
     }
 
     public String getName() {

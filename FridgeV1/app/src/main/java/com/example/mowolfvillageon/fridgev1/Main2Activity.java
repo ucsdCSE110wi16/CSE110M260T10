@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,6 +43,15 @@ public class Main2Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         populateListView();
 
+        Spinner spinSorter = (Spinner) findViewById(R.id.sortSpinner);
+
+        // Catagory Spinner - Set up
+        ArrayAdapter<CharSequence> categoryAdapter = ArrayAdapter.createFromResource(this,
+                R.array.sort_categories,
+                R.layout.custom_textview);
+        categoryAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinSorter.setAdapter(categoryAdapter);
+
     }
 
     private void populateListView() {
@@ -49,7 +59,7 @@ public class Main2Activity extends AppCompatActivity {
         //String[] starterFoods = {"Apple", "Chicken", "Water"};
 
         // Set up adapter
-        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
+        final Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
 
         myFirebaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -65,7 +75,7 @@ public class Main2Activity extends AppCompatActivity {
 
                 ListView list = (ListView) findViewById(R.id.listViewFridge);
                 list.setAdapter(adapter);
-                Collections.sort(foodNames);
+                //Collections.sort(foodNames);
 
                 //Click on items for its details
                 list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -133,4 +143,37 @@ public class Main2Activity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 
+    public void onSortList(View v) {
+        Firebase ref = new Firebase("https://fridge-it2.firebaseio.com/");
+        Spinner spinSortChoice = (Spinner) findViewById(R.id.sortSpinner);
+
+        spinSortChoice.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String SortChoice = parent.getItemAtPosition(position).toString();
+                Toast.makeText(Main2Activity.this, SortChoice, Toast.LENGTH_SHORT).show();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) { }
+        });
+        final String SortChoice = spinSortChoice.getSelectedItem().toString();
+        Toast.makeText(Main2Activity.this, SortChoice + "KK", Toast.LENGTH_SHORT).show();
+
+        if (SortChoice.equals("A->Z")) {
+            Toast.makeText(Main2Activity.this, "A->Z", Toast.LENGTH_SHORT).show();
+        }
+        else if (SortChoice.equals("Category")){
+            ref.orderByChild("Category");
+            Toast.makeText(Main2Activity.this, "Category", Toast.LENGTH_SHORT).show();
+
+
+        }
+        else if (SortChoice.equals("Expiration Date")) {
+            Toast.makeText(Main2Activity.this, "Expiration Date", Toast.LENGTH_SHORT).show();
+        }
+        else if (SortChoice.equals("Owner")) {
+            Toast.makeText(Main2Activity.this, "Owner", Toast.LENGTH_SHORT).show();
+        }
+
+    }
 }

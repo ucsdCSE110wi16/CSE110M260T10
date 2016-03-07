@@ -11,7 +11,7 @@ public class Condiments extends Food{
     public Condiments(String owner, String name) {
         super(owner);
         this.name = name;
-        this.catagory = "Condiments";
+        this.catagory = "Condiment";
     }
 
     public String getName() {

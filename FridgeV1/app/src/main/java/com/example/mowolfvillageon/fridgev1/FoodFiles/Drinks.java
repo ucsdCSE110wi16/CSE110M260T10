@@ -10,7 +10,7 @@ public class Drinks  extends Food{
     public Drinks(String owner, String name) {
         super(owner);
         this.name = name;
-        this.catagory = "Drinks";
+        this.catagory = "Drink";
     }
 
     public String getName() {

@@ -30,7 +30,13 @@
         <item>Meals</item>
         <item>Meats</item>
         <item>Vegetables</item>
+    </string-array>
 
+    <string-array name="sort_categories">
+        <item>A->Z</item>
+        <item>Category</item>
+        <item>Expiration Date</item>
+        <item>Owner</item>
     </string-array>
 
     <!-- Resources for NewUserActivity -->

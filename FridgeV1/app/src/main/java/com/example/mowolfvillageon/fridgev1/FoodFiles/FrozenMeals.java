@@ -10,7 +10,7 @@ public class FrozenMeals  extends Food{
     public FrozenMeals(String owner, String name) {
         super(owner);
         this.name = name;
-        this.catagory = "Frozen Meals";
+        this.catagory = "Frozen Meal";
     }
 
     public String getName() {

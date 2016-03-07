@@ -8,7 +8,7 @@ public class Vegetables extends Food {
     public Vegetables(String owner, String name) {
         super(owner);
         this.name = name;
-        this.catagory = "Vegetables";
+        this.catagory = "Vegetable";
     }
 
     public String getName() {

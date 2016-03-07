@@ -6,11 +6,13 @@ package com.example.mowolfvillageon.fridgev1.FoodFiles;
 public class Meals extends Food{
     private String name;
     private String catagory;
+    private String expiration;
 
-    public Meals(String owner, String name) {
+    public Meals(String owner, String name, String expiration) {
         super(owner);
         this.name = name;
         this.catagory = "Meals";
+        this.expiration = expiration;
     }
 
     public String getName() {
@@ -22,5 +24,7 @@ public class Meals extends Food{
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getExpiration () { return expiration; }
 }
 

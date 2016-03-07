@@ -36,6 +36,7 @@ public class InsertActivity extends AppCompatActivity {
 
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
         Spinner spinFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
+        EditText etFoodExpiration = (EditText) findViewById(R.id.EditTextFoodExpiration)
         EditText etFoodOwner = (EditText) findViewById(R.id.EditTextFoodOwner);
 
 
@@ -55,6 +56,7 @@ public class InsertActivity extends AppCompatActivity {
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
         Spinner spinFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
         EditText etFoodOwner = (EditText) findViewById(R.id.EditTextFoodOwner);
+        EditText etFoodExpiration = (EditText) findViewById(R.id.EditTextFoodExpiration);
 
         // Food Name
         String FoodName = etFoodName.getText().toString();
@@ -79,6 +81,10 @@ public class InsertActivity extends AppCompatActivity {
         });
         final String FoodCategory = spinFoodCategory.getSelectedItem().toString();
 
+        //Food Expiration
+        String FoodExpiration = etFoodExpiration.getText().toString();
+        FoodExpiration = wordCaseStandardized(FoodExpiration);
+
         // Food Owner
         String FoodOwner = etFoodOwner.getText().toString();
         FoodOwner = wordCaseStandardized(FoodOwner);
@@ -91,61 +97,61 @@ public class InsertActivity extends AppCompatActivity {
         Toast.makeText(InsertActivity.this, "Success: " + (String) FoodCategory, Toast.LENGTH_SHORT).show();
 
         if(  FoodCategory.equals("Condiments")) {
-            Condiments condiments = new Condiments(FoodOwner, FoodName);
+            Condiments condiments = new Condiments(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(condiments.getName()).setValue(condiments);
             Toast.makeText(InsertActivity.this, "Success: Condiments", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Dairy")) {
-            Dairy dairy = new Dairy(FoodOwner, FoodName);
+            Dairy dairy = new Dairy(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(dairy.getName()).setValue(dairy);
             Toast.makeText(InsertActivity.this, "Success: Dairy", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Drinks")) {
-            Drinks drinks = new Drinks(FoodOwner, FoodName);
+            Drinks drinks = new Drinks(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(drinks.getName()).setValue(drinks);
             Toast.makeText(InsertActivity.this, "Success: Drinks", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Frozen Meals")) {
-            FrozenMeals frozenmeals = new FrozenMeals(FoodOwner, FoodName);
+            FrozenMeals frozenmeals = new FrozenMeals(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(frozenmeals.getName()).setValue(frozenmeals);
             Toast.makeText(InsertActivity.this, "Success: Frozen Meals", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Fruit")) {
-            Fruits fruit = new Fruits(FoodOwner, FoodName);
+            Fruits fruit = new Fruits(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(fruit.getName()).setValue(fruit);
             Toast.makeText(InsertActivity.this, "Success: Fruit", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Grains")) {
-            Grains grains = new Grains(FoodOwner, FoodName);
+            Grains grains = new Grains(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(grains.getName()).setValue(grains);
             Toast.makeText(InsertActivity.this, "Success: Grains", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Meals")) {
-            Meals meals = new Meals(FoodOwner, FoodName);
+            Meals meals = new Meals(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(meals.getName()).setValue(meals);
             Toast.makeText(InsertActivity.this, "Success: Meals", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Meats")) {
-            Meats meats = new Meats(FoodOwner, FoodName);
+            Meats meats = new Meats(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(meats.getName()).setValue(meats);
             Toast.makeText(InsertActivity.this, "Success: Meats", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Other")) {
-            OtherFood other = new OtherFood(FoodOwner, FoodName);
+            OtherFood other = new OtherFood(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(other.getName()).setValue(other);
             Toast.makeText(InsertActivity.this, "Success: Other", Toast.LENGTH_SHORT).show();
         }
 
         if( FoodCategory.equals("Vegetables")) {
-            Vegetables veg = new Vegetables(FoodOwner, FoodName);
+            Vegetables veg = new Vegetables(FoodOwner, FoodName, FoodExpiration);
             myFirebaseRef.child(veg.getName()).setValue(veg);
             Toast.makeText(InsertActivity.this, "Success: Vegetables", Toast.LENGTH_SHORT).show();
         }

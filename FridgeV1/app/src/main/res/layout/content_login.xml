@@ -48,6 +48,7 @@
             android:hint="@string/loginEmail"
             android:ems="10"
             android:id="@+id/EditTextLoginEmail"
+<<<<<<< HEAD
             android:textColor="#FFFFFF"/>
 
         <TextView
@@ -60,6 +61,10 @@
             android:textAlignment="center"
             android:textColor="#14a38d" />
 
+=======
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
+>>>>>>> origin/master
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,7 +72,8 @@
             android:hint="@string/loginPassword"
             android:ems="10"
             android:id="@+id/EditTextLoginPassword"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
         <Button
             android:id="@+id/Login"
             android:layout_height="wrap_content"

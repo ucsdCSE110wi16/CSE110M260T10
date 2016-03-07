@@ -65,7 +65,7 @@
             android:textColor="#14a38d"/>
 
         <Spinner
-            android:layout_width="335dp"
+            android:layout_width="304dp"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
             android:id="@+id/SpinnerFoodCatagory"

@@ -30,13 +30,14 @@ import java.util.Collection;
 import java.util.Collections;
 
 public class Main2Activity extends AppCompatActivity {
-
+    private int count;
     protected ArrayList<String> foodNames = new ArrayList<>();
     SearchView sv;  //initializing the SearchView
     ArrayAdapter<String> adapter; //moved initialization of adapter so it can be reached by SearchView
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        count =0;
         super.onCreate(savedInstanceState);
         Firebase.setAndroidContext(this);
         setContentView(R.layout.activity_main2);
@@ -68,6 +69,7 @@ public class Main2Activity extends AppCompatActivity {
                 for (DataSnapshot child : snapshot.getChildren()) {
                     String foodName = (String) child.child("name").getValue();
                     foodNames.add(foodName);
+                    count++;
                 }
                 adapter = new ArrayAdapter<>(
                         Main2Activity.this,
@@ -181,6 +183,13 @@ public class Main2Activity extends AppCompatActivity {
         else if (SortChoice.equals("Owner")) {
             Toast.makeText(Main2Activity.this, "Owner", Toast.LENGTH_SHORT).show();
         }
+        else {
+            Toast.makeText(Main2Activity.this, "HELLLOOOO", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+    public int getDatabaseCount() {
+        return count;
 
     }
 }

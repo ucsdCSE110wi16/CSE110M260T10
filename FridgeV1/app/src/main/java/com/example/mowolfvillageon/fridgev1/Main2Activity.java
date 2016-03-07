@@ -85,7 +85,9 @@ public class Main2Activity extends AppCompatActivity {
                                             long arg3) {
                         //Obtain string representation of food item to remove
                         String value = (String) adapter.getItemAtPosition(position);
-
+                        Intent i = new Intent(getApplicationContext(), ItemInfo.class);
+                        i.putExtra("value", value);
+                        startActivity(i);
                         Toast.makeText(Main2Activity.this, value, Toast.LENGTH_SHORT).show();
 
                     }

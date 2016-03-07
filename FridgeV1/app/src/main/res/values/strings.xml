@@ -19,6 +19,9 @@
     <string name="title_activity_remove">Food Removal</string>
     <string name="button_remove_cancel">CANCEL</string>
 
+    <!-- Resources for ItemInfo activity -->
+    <string name="item_info">Item Information</string>
+    <string name="close">Close</string>
 
     <string-array name="food_categories">
         <item>Condiments</item>
@@ -54,4 +57,5 @@
     <string name="loginPassword">Password</string>
     <string name="loginLogin">Login</string>
     <string name="title_activity_login">User Login</string>
+    <string name="title_activity_item_info">ItemInfo</string>
 </resources>

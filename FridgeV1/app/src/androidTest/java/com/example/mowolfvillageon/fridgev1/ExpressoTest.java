@@ -21,12 +21,9 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
-<<<<<<< HEAD
 
 import static org.hamcrest.Matchers.is;
 
-=======
->>>>>>> origin/master
 
 /**
  * Created by mowolfvillageon on 3/7/16.
@@ -39,36 +36,25 @@ public class ExpressoTest {
     Integer dbCount;
     Integer dbCountR;
     @Rule
-<<<<<<< HEAD
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(Main2Activity.class);
     Main2Activity m2a = new Main2Activity();
-=======
-    public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(MainActivity.class);
     public InsertActivity ia = new InsertActivity();
->>>>>>> origin/master
 
     /* @Test
     public void listGoesOverTheFold() {
         onView(withText("Hello world!")).check(matches(isDisplayed()));
-<<<<<<< HEAD
     } */
-=======
 
-    }
-
+    
 
 
->>>>>>> origin/master
     @Before
     public void initValidString() {
         // Specify a valid string.
         sFood = "Apple";
         dbCount = m2a.getDatabaseCount();
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
     @Test
     public void removedItem() {
         Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");

@@ -53,13 +53,5 @@
         android:layout_centerHorizontal="true"
         android:onClick="onNewUserButtonClick" />
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/DevHack"
-        android:onClick="onDevHackClick"
-        android:background="#131313"
-        android:layout_above="@+id/angry_btn"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

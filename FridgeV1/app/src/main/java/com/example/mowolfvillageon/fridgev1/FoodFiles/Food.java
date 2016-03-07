@@ -1,4 +1,4 @@
-package com.example.mowolfvillageon.fridgev1;
+package com.example.mowolfvillageon.fridgev1.FoodFiles;
 
 
 public abstract class Food {

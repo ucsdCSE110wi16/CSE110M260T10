@@ -83,16 +83,15 @@
         android:layout_alignEnd="@+id/button2" />
 
     <SearchView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/searchView"
         android:queryHint="Search..."
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/button2"
-        android:layout_toStartOf="@+id/button2" />
-
+        android:background="#144376"
+   />
 
 
 </RelativeLayout>

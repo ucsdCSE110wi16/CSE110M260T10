@@ -40,7 +40,8 @@
             android:id="@+id/EditTextFoodName"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -73,7 +74,8 @@
             android:id="@+id/EditTextFoodOwner"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
         <Button
             android:id="@+id/AddItem"
             android:layout_height="wrap_content"

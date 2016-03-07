@@ -7,11 +7,13 @@ public class Condiments extends Food{
 
     private String name;
     private String catagory;
+    private String expiration;
 
-    public Condiments(String owner, String name) {
+    public Condiments(String owner, String name, String expiration) {
         super(owner);
         this.name = name;
         this.catagory = "Condiment";
+        this.expiration = expiration;
     }
 
     public String getName() {
@@ -23,4 +25,6 @@ public class Condiments extends Food{
     public void setName(String name) {
         this.name = name;
     }
+
+    public String getExpiration () { return expiration; }
 }

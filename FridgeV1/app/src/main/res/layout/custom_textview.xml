@@ -3,7 +3,7 @@
     android:id="@+id/tv"
     android:textColor="#FFFFFF"
     android:layout_width="fill_parent"
-    android:gravity="center"
+
     android:layout_height="wrap_content"
     android:paddingTop="8dip"
     android:paddingBottom="8dip"

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Spinner;
@@ -96,6 +97,10 @@ public class Main2Activity extends AppCompatActivity {
                 int id = sv.getContext().getResources().getIdentifier("android:id/search_src_text", null, null);
                 TextView textView = (TextView) sv.findViewById(id);
                 textView.setTextColor(Color.WHITE);
+                //sv.setIconifiedByDefault(false);
+
+
+
 
                 sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                     @Override

@@ -40,7 +40,8 @@
             android:id="@+id/EditTextFoodName"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,12 +69,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
+            android:hint="@string/foodExpiration"
+            android:ems="10"
+            android:id="@+id/EditTextFoodExpiration"
+            android:fontFamily="sans-serif"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
             android:hint="@string/foodOwner"
             android:ems="10"
             android:id="@+id/EditTextFoodOwner"
             android:fontFamily="sans-serif"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
         <Button
             android:id="@+id/AddItem"
             android:layout_height="wrap_content"

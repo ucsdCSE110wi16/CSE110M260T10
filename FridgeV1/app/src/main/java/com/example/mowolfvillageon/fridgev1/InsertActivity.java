@@ -60,7 +60,32 @@ public class InsertActivity extends AppCompatActivity {
 
         // Food Name
         String FoodName = etFoodName.getText().toString();
-        FoodName = wordCaseStandardized(FoodName);
+        String OwnerName = etFoodOwner.getText().toString();
+        String expirationDate = etFoodExpiration.getText().toString();
+
+        // check if both fields were left blank
+        if (FoodName.matches("") || OwnerName.matches("") || expirationDate.matches("")) {
+            // check if food name field was left blank
+            if (FoodName.matches("")) {
+                Toast.makeText(this, "You forgot to enter your food!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            // check if owner name field was left blank
+            else if (OwnerName.matches("")) {
+                Toast.makeText(this, "You forgot to enter your name!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            // check if expiration date was entered
+            else{
+                Toast.makeText(this, "You forgot to enter expiration date!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
+
+        // if everything good, continue
+        else {
+            FoodName = wordCaseStandardized(FoodName);
+        }
 
 
         // Food Category

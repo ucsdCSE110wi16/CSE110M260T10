@@ -38,6 +38,7 @@
             android:hint="@string/newUserName"
             android:ems="10"
             android:textColor="#FFFFFF"
+            android:textColorHint="#808080"
             android:id="@+id/EditTextNewUserName" />
         <EditText
             android:layout_width="match_parent"
@@ -46,6 +47,7 @@
             android:hint="@string/newUserEmail"
             android:ems="10"
             android:textColor="#FFFFFF"
+            android:textColorHint="#808080"
             android:id="@+id/EditTextNewUserEmail" />
         <EditText
             android:layout_width="match_parent"
@@ -54,6 +56,7 @@
             android:hint="@string/newUserPassword"
             android:ems="10"
             android:textColor="#FFFFFF"
+            android:textColorHint="#808080"
             android:id="@+id/EditTextNewUserPassword" />
         <Button
             android:id="@+id/AddUser"

@@ -33,7 +33,6 @@ public class InsertActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
         EditText etFoodName = (EditText) findViewById(R.id.EditTextFoodName);
         Spinner spinFoodCategory = (Spinner) findViewById(R.id.SpinnerFoodCatagory);
         EditText etFoodExpiration = (EditText) findViewById(R.id.EditTextFoodExpiration);

@@ -19,7 +19,8 @@
         android:layout_height="fill_parent"
         android:id="@+id/linearLayout"
         android:weightSum="1"
-        android:gravity="left">
+        android:gravity="left"
+        android:layout_above="@+id/AddItem">
 
         <TextView
             android:id="@+id/TextViewTitle"
@@ -32,6 +33,13 @@
             android:gravity="left">
 
         </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize = "14pt"
+            android:id="@+id/textView8"
+            android:layout_above = "@+id/FoodNameDisplay"/>
 
         <TextView
             android:id="@+id/FoodNameDisplay"
@@ -73,19 +81,19 @@
 
         </TextView>
 
-        <Button
-            android:id="@+id/AddItem"
-            android:layout_height="wrap_content"
-            android:text="@string/close"
-            android:onClick="close"
-            android:layout_width="fill_parent"
-            android:background="#14a38d"
-            android:textColor="#FFFFFF"
-            android:textSize="25sp"
-            android:fontFamily="sans-serif-thin"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="175dp">
-        </Button>
-
     </LinearLayout>
+
+    <Button
+        android:id="@+id/AddItem"
+        android:layout_height="wrap_content"
+        android:text="@string/close"
+        android:onClick="close"
+        android:layout_width="fill_parent"
+        android:background="#14a38d"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_alignParentBottom="true"
+        >
+    </Button>
 </RelativeLayout>

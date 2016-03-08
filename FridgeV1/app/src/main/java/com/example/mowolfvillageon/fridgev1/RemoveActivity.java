@@ -33,7 +33,10 @@ public class RemoveActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        final Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
+        Bundle extras = getIntent().getExtras();
+        final String loginPassword = extras.getString("loginPassword");
+
+        final Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/" + loginPassword);
         final ArrayList<String> foodNames = new ArrayList<>();
 
         //Get ListView object from XML
@@ -64,14 +67,15 @@ public class RemoveActivity extends AppCompatActivity {
                         String value = (String)adapter.getItemAtPosition(position);
 
                         //create firebase reference to the food item
-                        Firebase removeItemRef = new Firebase("https://fridge-it2.firebaseio.com/" + value);
+                        Firebase removeItemRef = new Firebase("https://fridge-it2.firebaseio.com/" + loginPassword + "/" + value);
 
                         //remove the food item
                         removeItemRef.setValue(null);
                         Toast.makeText(RemoveActivity.this, "Removed " + value, Toast.LENGTH_SHORT).show();
 
-                        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
-
+                        Intent ir = new Intent(getApplicationContext(), Main2Activity.class);
+                        ir.putExtra("loginPassword", loginPassword);
+                        startActivity(ir);
                     }
                 });
 
@@ -91,7 +95,13 @@ public class RemoveActivity extends AppCompatActivity {
     // Button for canceling the removal of an Item
     public void onCancelRemoveItemButtonClick(View v){
         Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), Main2Activity.class));
+
+        Bundle extras = getIntent().getExtras();
+        final String loginPassword = extras.getString("loginPassword");
+
+        Intent irc = new Intent(getApplicationContext(), Main2Activity.class);
+        irc.putExtra("loginPassword", loginPassword);
+        startActivity(irc);
     }
 
 }

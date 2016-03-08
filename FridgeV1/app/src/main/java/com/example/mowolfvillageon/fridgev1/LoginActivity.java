@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etLoginEmail = (EditText) findViewById(R.id.EditTextLoginEmail);
         EditText etLoginPassword = (EditText) findViewById(R.id.EditTextLoginPassword);
         final String loginEmail = etLoginEmail.getText().toString();
-        String loginPassword = etLoginPassword.getText().toString();
+        final String loginPassword = etLoginPassword.getText().toString();
 
         Firebase ref = new Firebase("https://fridge-it2.firebaseio.com");
         ref.authWithPassword(loginEmail, loginPassword, new Firebase.AuthResultHandler() {
@@ -39,7 +39,10 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Login Successful!" , Toast.LENGTH_SHORT).show();
                 System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Button button = (Button) v;
-                startActivity(new Intent(getApplicationContext(), Main2Activity.class));
+
+                Intent i = new Intent(getApplicationContext(), Main2Activity.class);
+                i.putExtra("loginPassword", loginPassword);
+                startActivity(i);
             }
 
             @Override

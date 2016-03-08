@@ -62,6 +62,8 @@ public class InsertActivity extends AppCompatActivity {
         String OwnerName = etFoodOwner.getText().toString();
         String expirationDate = etFoodExpiration.getText().toString();
 
+
+
         // check if both fields were left blank
         if (FoodName.matches("") || OwnerName.matches("") || expirationDate.matches("")) {
             // check if food name field was left blank
@@ -113,12 +115,14 @@ public class InsertActivity extends AppCompatActivity {
         String FoodOwner = etFoodOwner.getText().toString();
         FoodOwner = wordCaseStandardized(FoodOwner);
 
-        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
+        Bundle extras = getIntent().getExtras();
+        String loginPassword = extras.getString("loginPassword");
+
+        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/" + loginPassword);
 
         /* Fruits fruit = new Fruits(FoodOwner, FoodName);
         myFirebaseRef.child(fruit.getName()).setValue(fruit); */
 
-        Toast.makeText(InsertActivity.this, "Success: " + (String) FoodCategory, Toast.LENGTH_SHORT).show();
 
         if(  FoodCategory.equals("Condiments")) {
             Condiments condiments = new Condiments(FoodOwner, FoodName, FoodExpiration);
@@ -186,7 +190,9 @@ public class InsertActivity extends AppCompatActivity {
         //creates new main2 while deleting old main2
         Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("loginPassword", loginPassword);
         startActivity(intent);
+
     }
 
     public String wordCaseStandardized(String a) {

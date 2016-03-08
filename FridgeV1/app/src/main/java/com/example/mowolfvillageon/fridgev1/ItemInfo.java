@@ -27,8 +27,9 @@ public class ItemInfo extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         String value = extras.getString("value");
+        String loginPassword = extras.getString("loginPassword");
 
-        Firebase ref = new Firebase("https://fridge-it2.firebaseio.com/" + value + "/");
+        Firebase ref = new Firebase("https://fridge-it2.firebaseio.com/" + loginPassword + "/" + value + "/");
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

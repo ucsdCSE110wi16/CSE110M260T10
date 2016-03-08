@@ -61,9 +61,19 @@ public class Main2Activity extends AppCompatActivity {
         //String[] starterFoods = {"Apple", "Chicken", "Water"};
 
         // Set up adapter
+
+        Bundle extras = getIntent().getExtras();
+        final String loginPassword = extras.getString("loginPassword");
+
         final Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
 
-        myFirebaseRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        //Check if child exists, so that data is not overwritten
+        if(myFirebaseRef.child(loginPassword) == null) {
+            myFirebaseRef.child(loginPassword).setValue(loginPassword);
+        }
+
+        Firebase ref = new Firebase("https://fridge-it2.firebaseio.com/" + loginPassword);
+        ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 for (DataSnapshot child : snapshot.getChildren()) {
@@ -89,6 +99,7 @@ public class Main2Activity extends AppCompatActivity {
                         String value = (String) adapter.getItemAtPosition(position);
                         Intent i = new Intent(getApplicationContext(), ItemInfo.class);
                         i.putExtra("value", value);
+                        i.putExtra("loginPassword", loginPassword);
                         startActivity(i);
                         Toast.makeText(Main2Activity.this, value, Toast.LENGTH_SHORT).show();
 
@@ -135,13 +146,25 @@ public class Main2Activity extends AppCompatActivity {
     // Button for inserting an Item
     public void onAddItemButtonClick(View v){
         Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), InsertActivity.class));
+
+        Bundle extras = getIntent().getExtras();
+        String loginPassword = extras.getString("loginPassword");
+
+        Intent i = new Intent(getApplicationContext(), InsertActivity.class);
+        i.putExtra("loginPassword", loginPassword);
+        startActivity(i);
     }
 
     // Button for removing an Item
     public void onRemoveItemButtonClick(View v){
         Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), RemoveActivity.class));
+
+        Bundle extras = getIntent().getExtras();
+        String loginPassword = extras.getString("loginPassword");
+
+        Intent i = new Intent(getApplicationContext(), RemoveActivity.class);
+        i.putExtra("loginPassword", loginPassword);
+        startActivity(i);
     }
 
     // Logout Button

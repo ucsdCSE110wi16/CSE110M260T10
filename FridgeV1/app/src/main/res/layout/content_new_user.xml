@@ -64,7 +64,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:hint="@string/newUserEmail"
             android:ems="10"
             android:textColor="#FFFFFF"
@@ -84,7 +84,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="@string/newUserPassword"
             android:ems="10"
             android:textColor="#FFFFFF"

@@ -44,12 +44,12 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:hint="@string/loginEmail"
             android:ems="10"
             android:id="@+id/EditTextLoginEmail"
-<<<<<<< HEAD
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#808080"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -61,14 +61,11 @@
             android:textAlignment="center"
             android:textColor="#14a38d" />
 
-=======
-            android:textColor="#FFFFFF"
-            android:textColorHint="#808080"/>
->>>>>>> origin/master
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="@string/loginPassword"
             android:ems="10"
             android:id="@+id/EditTextLoginPassword"

@@ -9,7 +9,7 @@
     <!-- Resources for InsertActivity -->
     <string name="foodName">Your Item</string>
     <string name="foodCategory">Food Category</string>
-    <string name="foodExpiration">Expiration Date</string>
+    <string name="foodExpiration">mm/dd/yyyy</string>
     <string name="foodOwner">Your Name</string>
     <string name="addNew">Add Item</string>
     <string name="formTitle">Food Entry Form</string>

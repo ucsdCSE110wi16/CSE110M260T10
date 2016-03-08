@@ -118,11 +118,6 @@
         android:layout_alignBottom="@+id/sortSpinner"
         android:layout_alignRight="@+id/button"
         android:layout_alignEnd="@+id/button" />
-=======
-        android:background="#144376"
-   />
->>>>>>> origin/master
 
 
 </RelativeLayout>
-

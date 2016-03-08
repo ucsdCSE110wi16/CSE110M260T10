@@ -33,7 +33,7 @@ public class NewUserActivity extends AppCompatActivity {
         EditText etNewUserEmail = (EditText) findViewById(R.id.EditTextNewUserEmail);
         EditText etNewUserPassword = (EditText) findViewById(R.id.EditTextNewUserPassword);
         String userName = etNewUserName.getText().toString();
-        String userEmail = etNewUserEmail.getText().toString();
+        final String userEmail = etNewUserEmail.getText().toString();
         final String userPassword = etNewUserPassword.getText().toString();
 
         Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com");
@@ -44,8 +44,9 @@ public class NewUserActivity extends AppCompatActivity {
                 Toast.makeText(NewUserActivity.this, "Successfully created user account with uid: " + result.get("uid"), Toast.LENGTH_SHORT).show();
                 System.out.println("Successfully created user account with uid: " + result.get("uid"));
 
+                String email2 = userEmail.replace('.', '@');
                 Intent i = new Intent(getApplicationContext(), Main2Activity.class);
-                i.putExtra("loginPassword", userPassword);
+                i.putExtra("loginPassword", email2);
                 startActivity(i);
             }
             @Override

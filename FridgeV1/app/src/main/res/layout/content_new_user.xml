@@ -31,16 +31,6 @@
 
         </TextView>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Name"
-            android:id="@+id/textView"
-            android:fontFamily="sans-serif"
-            android:textAlignment="center"
-            android:textColor="#14a38d" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,41 +40,19 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#808080"
             android:id="@+id/EditTextNewUserName" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Email"
-            android:id="@+id/textView6"
-            android:fontFamily="sans-serif"
-            android:textAlignment="center"
-            android:textColor="#14a38d" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:hint="@string/newUserEmail"
             android:ems="10"
             android:textColor="#FFFFFF"
             android:textColorHint="#808080"
             android:id="@+id/EditTextNewUserEmail" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Password"
-            android:id="@+id/textView7"
-            android:fontFamily="sans-serif"
-            android:textAlignment="center"
-            android:textColor="#14a38d" />
-
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:hint="@string/newUserPassword"
             android:ems="10"
             android:textColor="#FFFFFF"

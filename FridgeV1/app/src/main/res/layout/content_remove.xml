@@ -20,8 +20,7 @@
         android:id="@+id/listViewFridgeRemove"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/cancelButton"
-        android:layout_below="@+id/textView7" />
+        android:layout_above="@+id/cancelButton" />
 
     <Button
         android:layout_width="175dp"
@@ -37,21 +36,6 @@
         android:onClick="onCancelRemoveItemButtonClick"
         android:id="@+id/cancelButton"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/listViewFridgeRemove"
-        android:layout_alignEnd="@+id/listViewFridgeRemove"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Click on the item you want to remove"
-        android:id="@+id/textView7"
-        android:fontFamily="sans-serif"
-        android:textSize="20dp"
-        android:textAlignment="center"
-        android:textColor="#14a38d"
-        android:paddingBottom="30dp"
         android:layout_alignRight="@+id/listViewFridgeRemove"
         android:layout_alignEnd="@+id/listViewFridgeRemove"
         android:layout_alignParentLeft="true"

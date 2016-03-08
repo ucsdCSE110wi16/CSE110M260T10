@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class RemoveActivity extends AppCompatActivity {
+
     ListView listView;
 
     @Override

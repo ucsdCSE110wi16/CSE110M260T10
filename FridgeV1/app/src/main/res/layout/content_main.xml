@@ -24,7 +24,7 @@
         android:fontFamily="sans-serif-thin"
         android:layout_width="325dp"
         android:layout_height="75dp"
-        android:background="@drawable/buttonshape3"
+        android:background="@drawable/buttonshape"
         android:contextClickable="true"
 
         android:focusable="false"

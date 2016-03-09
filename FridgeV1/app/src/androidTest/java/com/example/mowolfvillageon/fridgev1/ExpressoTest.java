@@ -7,6 +7,8 @@ import android.widget.ArrayAdapter;
 
 import com.firebase.client.Firebase;
 
+import junit.framework.TestCase;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -31,10 +33,13 @@ import static org.hamcrest.Matchers.is;
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class ExpressoTest {
+public class ExpressoTest extends TestCase {
+
     String sFood;
     Integer dbCount;
     Integer dbCountR;
+    Integer dbCountI;
+
     @Rule
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule(Main2Activity.class);
     Main2Activity m2a = new Main2Activity();
@@ -67,6 +72,7 @@ public class ExpressoTest {
         assertThat((dbCount), is(dbCountR));
         System.out.println("HELLO");
 
+        assertThat(dbCount - 1, is(dbCountR));
         //onView(withId(R.id.goodbye_button)).perform(click());
         //onView();
         /*onView(withId(R.id.my_view))            // withId(R.id.my_view) is a ViewMatcher
@@ -76,14 +82,13 @@ public class ExpressoTest {
 
     @Test
     public void insertItem(){
+        Firebase myFirebaseRef = new Firebase("https://fridge-it2.firebaseio.com/");
 
-    }
+        dbCount = m2a.getDatabaseCount();
+        onView(withId(R.id.button2)).perform(click());
+        dbCountI = m2a.getDatabaseCount();
 
-    @Test
-    public void insertTest(){
-       // ia.insert()
-        //comment
-
+        assertThat(dbCount+1, is(dbCountI));
 
     }
 }

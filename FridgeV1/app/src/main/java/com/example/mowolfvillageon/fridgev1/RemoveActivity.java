@@ -66,14 +66,8 @@ public class RemoveActivity extends AppCompatActivity {
                         //Obtain string representation of food item to remove
                         String value = (String)adapter.getItemAtPosition(position);
 
-                        //create firebase reference to the food item
-                        Firebase removeItemRef = new Firebase("https://fridge-it2.firebaseio.com/" + loginPassword + "/" + value);
-
-                        //remove the food item
-                        removeItemRef.setValue(null);
-                        Toast.makeText(RemoveActivity.this, "Removed " + value, Toast.LENGTH_SHORT).show();
-
-                        Intent ir = new Intent(getApplicationContext(), Main2Activity.class);
+                        Intent ir = new Intent(getApplicationContext(), removeConfirmActivity.class);
+                        ir.putExtra("item", value);
                         ir.putExtra("loginPassword", loginPassword);
                         startActivity(ir);
                     }
@@ -101,6 +95,7 @@ public class RemoveActivity extends AppCompatActivity {
 
         Intent irc = new Intent(getApplicationContext(), Main2Activity.class);
         irc.putExtra("loginPassword", loginPassword);
+        irc.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(irc);
     }
 

@@ -75,6 +75,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.mowolfvillageon.fridgev1.Main2Activity" />
         </activity>
+        <activity
+            android:name=".removeConfirmActivity"
+            android:label="@string/title_activity_remove_confirm"
+            android:parentActivityName=".RemoveActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.mowolfvillageon.fridgev1.RemoveActivity" />
+        </activity>
     </application>
 
 </manifest>

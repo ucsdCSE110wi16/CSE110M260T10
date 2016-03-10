@@ -1,27 +1,28 @@
 Remaining items to do
 
+
+Filter by categories (owner, expiration, food type) (Stephanie/Sandro)
+Color food based on who owns (Stephanie)
+Remove confirmation (i.e. "are you sure you want to remove <food>?")
+Testing at least three scenarios
+
+Design new icon (Stephanie, Jimmy) (MAYBE)
+Drop down for list owners (Limited owners) (Kevin) (MAYBE)
+
 Remove (Kevin) DONE
 Make buttons easier to click (Kevin) DONE
 Bigger text for list of items (Kevin) DONE
-Filter by categories (owner, expiration, food type) (Stephanie/Sandro)
-Click on item for its details 
-Backend (Sandro) 
-GUI (Stephanie) - just set text
-Fixing the ABC order (So capitalizing doesn’t have preference)  -Jimmy
-Search button more visible (Roger Ruan)
-Not middle aligned (Roger Ruan)
+Click on item for its details DONE
+Backend (Sandro) DONE
+GUI (Stephanie) - just set text DONE
+Fixing the ABC order (So capitalizing doesn’t have preference)  -Jimmy DONE
+Not middle aligned (Roger Ruan) DONE
 Lower the buttons (making use of whitespace) (Roger Ruan) DONE
-Drop down for list owners (Limited owners) (Kevin) (MAYBE)
-Change Titlebars to be better names - (Roger Ruan) done, removed bars
-Make drop down items = white text - Roger
-Make expiration  option in insert (Stephanie/Jimmy) (Sandro, backend)
-Limit database to specific user (Sandro?)
-Color food based on who owns (Stephanie)
-Design new icon (Stephanie, Jimmy)
-Remove confirmation (i.e. "are you sure you want to remove <food>?")
+Make expiration  option in insert (Stephanie/Jimmy) (Sandro, backend) DONE
+Limit database to specific user (Sandro and Kevin) DONE
 Pop up page for information on food (Sandro and Kevin) DONE
-Remove the bar on top of the pop up page for information on food (Roger?)
+Remove the bar on top of the pop up page for information on food (Roger) DONE
 Password encryption (Kevin) DONE
-Sorting
-Testing
-
+Search button more visible (Roger Ruan) DONE
+Change Titlebars to be better names - (Roger Ruan) DONE, removed bars
+Make drop down items = white text - Roger DONE

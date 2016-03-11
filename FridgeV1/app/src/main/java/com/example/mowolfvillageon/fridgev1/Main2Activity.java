@@ -172,7 +172,10 @@ public class Main2Activity extends AppCompatActivity {
         Button button = (Button) v;
         Toast.makeText(Main2Activity.this, "Logged Out Successful!", Toast.LENGTH_SHORT).show();
 
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+        startActivity(intent);
     }
 
     public void onSortList(View v) {

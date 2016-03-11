@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
                 System.out.println("User ID: " + authData.getUid() + ", Provider: " + authData.getProvider());
                 Button button = (Button) v;
 
-                String email2 = loginEmail.replace('.', '@');
+                String email2 = loginEmail.replace('.', ' ');
                 Intent i = new Intent(getApplicationContext(), Main2Activity.class);
                 i.putExtra("loginPassword", email2);
                 startActivity(i);

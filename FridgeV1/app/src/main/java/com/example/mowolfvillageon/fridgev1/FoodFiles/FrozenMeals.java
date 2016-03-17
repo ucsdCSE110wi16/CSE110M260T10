@@ -1,21 +1,24 @@
 package com.example.mowolfvillageon.fridgev1.FoodFiles;
 
+import com.example.mowolfvillageon.fridgev1.Food;
+
 /**
  * Created by mowolfvillageon on 2/24/16.
  */
-public class FrozenMeals  extends Food{
+public class FrozenMeals  extends Food {
     private String name;
     private String catagory;
     private String expiration;
 
     public FrozenMeals(String owner, String name, String expiration) {
-        super(owner);
+        super(owner, "Frozen Meal", expiration, name);
+        /* super(owner);
         this.name = name;
         this.catagory = "Frozen Meal";
-        this.expiration = expiration;
+        this.expiration = expiration; */
     }
 
-    public String getName() {
+    /* public String getName() {
         return name;
     }
 
@@ -25,5 +28,5 @@ public class FrozenMeals  extends Food{
         this.name = name;
     }
 
-    public String getExpiration () { return expiration; }
+    public String getExpiration () { return expiration; } */
 }

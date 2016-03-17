@@ -129,7 +129,7 @@
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:fontFamily="sans-serif-thin"
-            android:layout_marginTop="175dp">
+            android:layout_marginTop="75dp">
         </Button>
     </LinearLayout>
 </RelativeLayout>

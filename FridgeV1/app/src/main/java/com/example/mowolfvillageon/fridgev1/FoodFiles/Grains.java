@@ -1,19 +1,22 @@
 package com.example.mowolfvillageon.fridgev1.FoodFiles;
 
 
+import com.example.mowolfvillageon.fridgev1.Food;
+
 public class Grains extends Food {
     private String name;
     private String catagory;
     private String expiration;
 
     public Grains(String owner, String name, String expiration) {
-        super(owner);
+        super(owner, "Grains", expiration, name);
+        /* super(owner);
         this.name = name;
         this.catagory = "Grain";
-        this.expiration = expiration;
+        this.expiration = expiration; */
     }
 
-    public String getName() {
+    /* public String getName() {
         return name;
     }
 
@@ -23,5 +26,5 @@ public class Grains extends Food {
         this.name = name;
     }
 
-    public String getExpiration () { return expiration; }
+    public String getExpiration () { return expiration; } */
 }
